@@ -1,6 +1,9 @@
-import React from "react";
+interface SwitchProps {
+  value: boolean;
+  onChange: (value: boolean) => void;
+}
 
-const Switch = ({ value, onChange }) => {
+const Switch = ({ value, onChange }: SwitchProps) => {
   return (
     <div className="flex items-center gap-3">
 

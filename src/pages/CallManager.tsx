@@ -31,9 +31,9 @@ interface FormData {
   notes: string;
   companyName: string;
   softwareName: string;
+  typeofLead: string;
   budget: string;
   duration: string;
-  typeOfLead: string;
 }
 
 interface LeadData extends FormData {}
@@ -53,9 +53,9 @@ const CallManager: React.FC = () => {
     alternativeNumber: "",
     companyName: "",
     softwareName: "",
+    typeofLead: "",
     budget: "",
     duration: "",
-    typeOfLead: "",
   });
 
   const [leadHistory, setLeadHistory] = useState<any[]>([]);
@@ -317,7 +317,6 @@ const CallManager: React.FC = () => {
                 handleChange={handleChange}
                 handleUpdateSave={handleUpdateSave}
                 handleUpdateSaveExit={handleUpdateSaveExit}
-                getUserLeadHistory={getUserLeadHistory}
               />
             )}
 

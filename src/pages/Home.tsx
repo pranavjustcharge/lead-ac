@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Activity, CalendarCheck, PhoneCall, Timer } from 'lucide-react';
 
 // The main App component that renders the entire dashboard UI.

@@ -1,8 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { FaBars, FaMoon, FaGlobe, FaUserCircle, FaSun } from "react-icons/fa";
 import { AppContext } from "../../context/AppContext";
 
-const Navbar = ({ onToggle }) => {
+interface NavbarProps {
+  onToggle: () => void;
+}
+
+const Navbar = ({ onToggle }: NavbarProps) => {
   const { mode, toggleMode } = useContext(AppContext);
   
   return (

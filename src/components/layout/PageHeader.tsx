@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Switch from "../ui/Switch";
 
-const PageHeader = ({ title, breadcrumb }) => {
+interface PageHeaderProps {
+  title: string;
+  breadcrumb: string;
+}
+
+const PageHeader = ({ title, breadcrumb }: PageHeaderProps) => {
   const [started, setStarted] = useState(true);
   return (
     <div className="px-6 mt-4 flex justify-between">

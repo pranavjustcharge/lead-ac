@@ -1,15 +1,19 @@
-import React, { useState } from "react";
-import { FaUsers, FaRegCopyright, FaPhone,
-  FaBullhorn, FaClipboardList, FaCogs, FaRegFolderOpen
-} from "react-icons/fa";
-import { AiOutlineHome, AiOutlineMail } from "react-icons/ai";
-
-import { IoMdLogOut, IoIosSettings } from "react-icons/io";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { useState } from "react";
+import { FaClipboardList } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 
-const Sidebar = ({ expanded }) => {
+interface SidebarProps {
+  expanded: boolean;
+}
+
+interface MenuItemProps {
+  icon: React.ReactNode;
+  label: string;
+  expanded: boolean;
+}
+
+const Sidebar = ({ expanded }: SidebarProps) => {
   const navigate = useNavigate();
   const [show,setShow] = useState(false);
   return (
@@ -60,7 +64,7 @@ const Sidebar = ({ expanded }) => {
   );
 };
 
-const MenuItem = ({ icon, label, expanded }) => (
+const MenuItem = ({ icon, label, expanded }: MenuItemProps) => (
   <div
     className={`flex px-4 py-2 cursor-pointer transition-all duration-200 w-full
       ${expanded ? "justify-start gap-4 items-center" : "justify-center"}`}
